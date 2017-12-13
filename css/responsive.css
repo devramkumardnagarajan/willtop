@@ -38,7 +38,7 @@
 	
 	.lp-video-wrapper{background: url('../img/mobile_banner.jpg') center center no-repeat;}
 
-	.lp-video-wrapper .lp-content-table{background: none; background-color: rgba(0 ,0 ,0 ,0.4);}
+	.lp-video-wrapper .lp-content-table{background: none; background-color: rgba(0 ,0 ,0 ,0.4);position: relative;}
 
 	.lollypop-pattern-bg{
 	 	display: none;
@@ -1104,6 +1104,10 @@
 	  }
  }
 
-
-
+@media screen and (max-width: 430px) {
+    #lp-header-menu .navbar-header .navbar-brand {
+        padding: 0px 10px 15px;
+        margin: 0;
+    }
+}
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
