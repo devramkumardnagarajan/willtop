@@ -3221,4 +3221,34 @@ display:block !important;
         text-align: center;
         margin: auto;
     }
+    .carousel-inner .img-holder {
+    margin:auto;
+    text-align:center;
+    }
+    .carousel-inner .content-holder {
+    margin:auto;
+    text-align:center;
+
+    }
+    .carousel-inner img {
+width:80% ;
+height:80% ;
+max-width:350px;
+max-height:350px;
+}
+    #dev_process img {
+    transform:rotate(90deg);
+    width:80%;
+    max-height:500px;
+    }
+}
+.lp-on-img {
+    width: 100px;
+}
+.carousel-inner img {
+width:80% !important;
+height:80% !important;
+max-width:400px;
+max-height:400px;
+
 }

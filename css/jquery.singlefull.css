@@ -45,6 +45,13 @@ p {
 	margin: 0 0 50px;
 }
 a{cursor: pointer}
+.section-container h2,.section-container h3{font-family: 'Abril Fatface', cursive;
+    line-height: 3vw;
+    font-size: 2.5vw;
+    margin-bottom: 20px !important;
+}
+.section-container h1{font-family: 'Abril Fatface', cursive;line-height: 4.5vw;
+    font-size: 4vw; margin-bottom: 50px!important;}
 h2,h3{font-family: 'Abril Fatface', cursive;
     line-height: 3vw;
     font-size: 2.5vw;
@@ -52,7 +59,7 @@ h2,h3{font-family: 'Abril Fatface', cursive;
 }
 h1{font-family: 'Abril Fatface', cursive;line-height: 4.5vw;
     font-size: 4vw; margin-bottom: 50px!important;}
-body { background: #fff; font-family: 'Poppins', sans-serif;}
+body { background: #fff; font-family: 'Poppins', sans-serif !important;}
 #logo, .message { color: #333; }
 #logo {
   font-size: 100px;
@@ -1204,10 +1211,12 @@ section h4{ font-size: 1.5vw}
 h5{ font-size:20px !important;font-family: 'Abril Fatface', cursive;    margin: 25px 0 10px;}
 /*developement process*/
 #dev_process img{
-width: 79%;
-height: 879px;
-	position: relative;
-	z-index: 10;
+    width: 79%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    min-height: 600px;
+    max-height: 879px;
 }
 fieldset select{
 	border: 0;

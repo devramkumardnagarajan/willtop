@@ -1108,6 +1108,7 @@
     #lp-header-menu .navbar-header .navbar-brand {
         padding: 0px 10px 15px;
         margin: 0;
+        width:80%;
     }
 }
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
