@@ -127,6 +127,7 @@ if (!Array.prototype.indexOf) {
         // function to scroll the page to a section
         function goToSection(secName, opts) {
             // get the position of the target
+            console.log("secName:"+secName);
             var targetPosition = $('[' + opts.section + '="' + secName + '"]').position().top;
             // 当前页面正在动画时，不响应此次事件
             if (!isAnimating) {
@@ -159,24 +160,53 @@ if (!Array.prototype.indexOf) {
         // function to resize all the "data-target" divs
         function changeCSS(element) {
 
+            var oWidth = $(window).width();
+            var oHeight = $(window).height();
+            
             // Grab the screen resolution
-            var windowWidth = "100%";
-            var windowHeight = $(window).height();
+            //var windowWidth = "100%";
+            //var windowHeight = $(window).height();
             // Count how many targets the div has
+
+            var windowWidth = (oWidth>oHeight)?"100%":oWidth;
+            var windowHeight = (oHeight>oWidth)?"auto":oHeight;
+
             var targetsSize = $("[" + opts.section + "]").length;
 
             // Resize the parent div
-            $(element).css({
-                "width": windowWidth,
-                "height": windowHeight * targetsSize
-            });
-
+            if (oHeight > oWidth) {
+                $(element).css({
+                    "width": windowWidth,
+                    "height": "auto"
+                });
+                
+            } else {
+                
+                $(element).css({
+                    "width": windowWidth,
+                    "height": windowHeight * targetsSize
+                });
+            }
+            var dc = 0;
             // Resize all the targets div
             $(element).children("div[" + opts.section + "]").each(function() {
-                $(this).css({
-                    "width": windowWidth,
-                    "height": windowHeight
-                });
+                console.log("sec:" + opts.section);
+                if (dc == 0 && oHeight > oWidth && oWidth > 767) {
+                    
+                        $(this).css({
+                            "width": windowWidth,
+                            "height": oHeight
+                        });
+                   
+                } else {
+
+                    $(this).css({
+                        "width": windowWidth,
+                        "height": windowHeight
+                    });
+                }
+                dc += 1;
+                
             });
         }
 
