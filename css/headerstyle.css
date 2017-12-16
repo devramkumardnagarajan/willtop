@@ -56,7 +56,7 @@ h5 {font-size: 18px; line-height: 30px;}
 
 h6 {font-size: 14px;font-weight: bold;text-transform: uppercase;}
 
-p {font-size: 16px;font-family: 'Gotham-Book';line-height: 30px;}
+p {font-size: 16px;font-family: 'Arial Rounded MT';line-height: 30px;}
 
 .lp-realtive{position: relative;}
 
@@ -316,7 +316,9 @@ HOME PAGE VIDEO BANNER
 #lp-video-heading h1{
    font-size: 1.8em;  
    letter-spacing: -3px;
-   line-height:65px;						
+   line-height:65px;	
+       font-family: 'Arial Rounded MT';
+    text-transform: capitalize;					
 }
 
 .lp-video-wrapper .lp-content-table{
@@ -419,13 +421,13 @@ HOME PAGE VIDEO BANNER
  --------------------------------------------
  */
 
-.lp-main-wrapper .lp-banner-heading p {margin: 15px 0 34px 20px;}
+.lp-main-wrapper .lp-banner-heading p {margin: 15px 0 34px 20px; color:#fff;}
 
 .lp-main-wrapper .lp-banner-heading .al-swiggy{display:inline-block;font-family: 'Gotham-Medium';margin:15px 0; padding:7px 10px; background:#ffffff; color:#333;}
 
 .lp-circle span {border-radius: 20px;font-size: 18px;font-weight: normal;height: 36px; padding: 5px 6px 6px 6px;width: 36px;display: inline-block;}
 
-a.circular-anim .fa {font-size: 18px;padding-top: 4px; color:#fff;margin-top: 3px; position: absolute;  margin-left: -7px;}
+a.circular-anim .fa {font-size: 18px; color:#fff; position: absolute;  margin-left: -7px;}
 
 a.circular-btn:hover .fa {color:#fff;}
 /*
@@ -3155,9 +3157,11 @@ div#projectsection {
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
 .carousel-indicators .active{
 	background-color: #F47425 !important;
+    width:30px;
 }
 .carousel-indicators li{
 	 background-color: #999999 !important;
+     width:30px;
  }
  .social_circle .fa {
             font-size:20px;
@@ -3221,13 +3225,15 @@ display:block !important;
         text-align: center;
         margin: auto;
     }
+    #myCarousel {
+    margin-top:0;
+    }
     .carousel-inner .img-holder {
     margin:auto;
     text-align:center;
     }
     .carousel-inner .content-holder {
     margin:auto;
-    text-align:center;
 
     }
     .carousel-inner img {
@@ -3241,14 +3247,102 @@ max-height:350px;
     width:80%;
     max-height:500px;
     }
+    .section-container h2, .section-container h3 {
+    font-size:3vh;
+    line-height:3.2vh;
+    }
+    #e_learning_popup h1 {
+    font-size:3vh;
+    line-height:3.2vh;
+    margin-top:10%;
+    text-align: center;
+    }
+    #accordion .panel-title > a {
+    font-size:2vh;
+    }
+    #accordion ul li {
+    font-size:1.5vh;   
+    }
+    .panel-group {
+    margin: 0 5% 5%;
+    }
+    #client h2 {
+    font-size:10vh;
+    }
+    #client span {
+    font-size:7vh;
+    }
+    section.big-text {
+    top:20%;
+    }
+
 }
 .lp-on-img {
     width: 100px;
 }
 .carousel-inner img {
-width:80% !important;
-height:80% !important;
+width:70% !important;
+height:70% !important;
 max-width:400px;
 max-height:400px;
 
 }
+
+#myCarousel {
+    padding:5%;
+    margin-top:5%;
+    background: #ffffff;
+    box-shadow: 0px 0px 33px -12px #333;
+    -moz-box-shadow: 0px 0px 33px -12px #333;
+    -webkit-box-shadow: 0px 0px 33px -12px #333;
+    z-index: 10;
+    position: relative;
+}
+.myCarousalIndicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+
+.myCarousalIndicator li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.myCarousalIndicator .active{
+	background-color: #F47425 !important;
+}
+.myCarousalIndicator li{
+	 background-color: #999999 !important;
+     width:30px;
+ }
+.client-text {
+margin-top:20%;
+}
+.client-img {
+margin-top:20%;
+}
+.white-bg {
+    background: #fff;
+}
+.gray-bg {
+background: #e2e2e2;
+}
+#e_learning_popup {
+
+margin-top:5%;
+}
+.lp-video-wrapper{background: url('../img/mobile_banner.jpg') center center no-repeat;}

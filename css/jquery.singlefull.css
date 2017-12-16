@@ -49,6 +49,7 @@ a{cursor: pointer}
     line-height: 3vw;
     font-size: 2.5vw;
     margin-bottom: 20px !important;
+    margin-top: 20px !important;
 }
 .section-container h1{font-family: 'Abril Fatface', cursive;line-height: 4.5vw;
     font-size: 4vw; margin-bottom: 50px!important;}
@@ -143,7 +144,7 @@ div[data-target] > div {
 
 /*#fp-nav.right { right: 17px; }*/
 
-#fp-nav.left,header { left: 45px; }
+#fp-nav.left,header { left: 4%; }
 
 .fp-slidesNav {
   position: absolute;
@@ -468,20 +469,20 @@ section.big-text {
 
 /*map*/
 .map{
-	width: 55%;
+	/*width: 55%;
     position: absolute;
     left: 50%;
     top: 22%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);*/
 }
 #client label{
     font-size: 30px;
     color: #333;
     font-weight: 100;
-	margin-top: 100% !important;
+	/*margin-top: 100% !important;*/
 }
 #client h2 {
-    font-size: 7em;
+    font-size: 5em;
     background: -webkit-linear-gradient(135deg, #fe9606, #ff7b27, #ff6633);
         background-clip: border-box;
     -webkit-background-clip: text;
@@ -918,11 +919,11 @@ header{
 /*.carousel-inner{ overflow: visible!important}*/
 .carousel-inner h1{
 	color: #e8e8e8;
-    left: -50px;
+    left: -7%;
     font-size: 7vw;
     z-index: -1;
     position: absolute;
-	top: -15px;
+	top: 3px;
 }
 .carousel-control.left,.carousel-control.right{ background-image:none !important}
 .carousel-control {
@@ -960,13 +961,17 @@ section.controller {
     width: 20px !important;
     height: 30px  !important;
 }
-
 #technology .content-resizer .container {
     background: url(../img/technology.png) no-repeat;
-    min-height: 610px;
-background-size: 80%;
-background-position-x: 0%;
-background-position-y: bottom;
+    background-size: 84%;
+    background-position-x: 0%;
+    background-position-y: 86%;
+    height:inherit;
+    min-height:500px;
+}
+#technology .content-resizer {
+    
+    height:inherit;
 }
 
 /*img overlay*/
@@ -1121,7 +1126,7 @@ div.circle_map {
 .social_icon {
   position: fixed;
     top: 50%;
-    right: 40px;
+    right: 3%;
     z-index: 999;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -1370,7 +1375,7 @@ input:focus, input:active, input:{ background-color: transparent !important; out
 #e_learning_popup h1{
 	font-size: 3.5vw;
     line-height: 1.5em;
-    text-align: left;
+    
     margin-top: 50%;
     text-align: right;
 }
