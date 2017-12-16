@@ -3159,6 +3159,9 @@ div#projectsection {
 	background-color: #F47425 !important;
     width:30px;
 }
+c-indicator {
+height:50px;
+}
 .carousel-indicators li{
 	 background-color: #999999 !important;
      width:30px;
@@ -3299,13 +3302,13 @@ max-height:400px;
     position: relative;
 }
 .myCarousalIndicator {
-    position: absolute;
+   /* position: absolute;*/
     bottom: 10px;
     left: 50%;
     z-index: 15;
-    width: 60%;
+    /*width: 60%;*/
     padding-left: 0;
-    margin-left: -30%;
+    /*margin-left: -30%;*/
     text-align: center;
     list-style: none;
 }
