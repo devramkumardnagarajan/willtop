@@ -55,6 +55,7 @@ if (!Array.prototype.indexOf) {
             // 监听键盘事件
             $(document).on("keydown", function(event) {
                 var code = event.keyCode;
+                console.log("code:"+code);
                 if (code == 38 || code == 40) {
                     var sectionListLength = sectionList.length;
                     var nextIndex = (code == 38) ? ((sectionListLength + currentIndex - 1) % sectionListLength) : ((sectionListLength + currentIndex + 1) % sectionListLength);
@@ -188,15 +189,21 @@ if (!Array.prototype.indexOf) {
                 });
             }
             var dc = 0;
+            if (oWidth > 767) {
+                $(this).css({
+                    "width": windowWidth,
+                    "height": oHeight
+                });
+            }
             // Resize all the targets div
             $(element).children("div[" + opts.section + "]").each(function() {
                 console.log("sec:" + opts.section);
                 if (dc == 0 && oHeight > oWidth && oWidth > 767) {
-                    
-                        $(this).css({
-                            "width": windowWidth,
-                            "height": oHeight
-                        });
+                    $('.lp-content-table').css({
+                        "width": windowWidth,
+                        "height": oHeight
+                    });
+                        
                    
                 } else {
 
