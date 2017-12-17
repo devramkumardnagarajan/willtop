@@ -3365,16 +3365,32 @@ text-transform:none;
 font-size:1.8vw;
 }
 .abt-img{
-    width: 60%;
+    width: 50%;
     background: #F47425;
     padding-bottom: 5%;
     padding-right: 2%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 13%;
+    margin-top: 6%;
 }
 .abt-img img{
     width: 100%;
     margin-top: -10%;
     margin-left: -10%;
+}
+
+.modal-header h2 {
+text-align:center;
+padding:2%;
+}
+.abt-img p{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    margin-bottom: 10%;
+    font-size: 2.5vw;
+    float: left;
+    margin-left: -15%;
+    margin-top: 16%;
 }
