@@ -474,7 +474,7 @@ expectations.</p>
 							<div class="panel panel-default">
       							<div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(1)">e-learning services</a>
+          <a id="ph1" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(1)">e-learning services</a>
         </h4>
       </div>
      							<div id="collapse1" class="panel-collapse collapse in fadeInDown animated animated">
@@ -493,7 +493,7 @@ expectations.</p>
     						<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(2)">Learning management system</a>
+          <a id="ph2" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(2)">Learning management system</a>
         </h4>
       </div>
       <div id="collapse2" class="panel-collapse collapse fadeInDown animated animated">
@@ -504,7 +504,7 @@ expectations.</p>
 							<div class="panel panel-default">
       							<div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(3)">Digital learning strategies</a>
+          <a id="ph3" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(3)">Digital learning strategies</a>
         </h4>
       </div>
      							<div id="collapse3" class="panel-collapse collapse fadeInDown animated animated">
@@ -525,7 +525,7 @@ expectations.</p>
     						<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(4)">e-learning solutions by traning</a>
+          <a id="ph4" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(4)">e-learning solutions by traning</a>
         </h4>
       </div>
       <div id="collapse4" class="panel-collapse collapse fadeInDown animated animated">
@@ -543,7 +543,7 @@ expectations.</p>
 							<div class="panel panel-default">
       							<div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(5)">Rappid e-learning solutions by tool</a>
+          <a id="ph5" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(5)">Rappid e-learning solutions by tool</a>
         </h4>
       </div>
      							<div id="collapse5" class="panel-collapse collapse fadeInDown animated animated">
@@ -562,7 +562,7 @@ expectations.</p>
    							<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(6)">e-learning solutions by traning</a>
+          <a id="ph6" class="ph" data-toggle="collapse" data-parent="#accordion" onclick="showPanelData(6)">e-learning solutions by traning</a>
         </h4>
       </div>
       <div id="collapse6" class="panel-collapse collapse fadeInDown animated animated">
@@ -992,11 +992,15 @@ $(".service_list li").click(function(){
     function showPanelData(id) {
         if($('#collapse' + id).hasClass('in')){
             $('.collapse').removeClass('in');
-            $('#collapse' + id).removeClass('in');
+            $('.ph').addClass('collapsed');            
+            
             $('#collapse' + id).setAttribute('aria-expanded', "false");
-        }else{
+        } else {
+            $('#collapse' + id).removeClass('in');
             $('.collapse').removeClass('in');
             $('#collapse' + id).addClass('in');
+            $('.ph').addClass('collapsed');
+            $('#ph' + id).removeClass('collapsed');
             $('#collapse' + id).setAttribute('aria-expanded', "true");
         }
         
