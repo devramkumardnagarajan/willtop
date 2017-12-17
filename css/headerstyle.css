@@ -427,7 +427,7 @@ HOME PAGE VIDEO BANNER
 
 .lp-circle span {border-radius: 20px;font-size: 18px;font-weight: normal;height: 36px; padding: 5px 6px 6px 6px;width: 36px;display: inline-block;}
 
-a.circular-anim .fa {font-size: 18px; color:#fff; position: absolute;  margin-left: -7px;}
+a.circular-anim .fa {font-size: 18px; color:#fff; position: absolute;  margin-left: -7px; margin-top: 4px;}
 
 a.circular-btn:hover .fa {color:#fff;}
 /*
@@ -3349,3 +3349,32 @@ background: #e2e2e2;
 margin-top:5%;
 }
 .lp-video-wrapper{background: url('../img/mobile_banner.jpg') center center no-repeat;}
+
+.abt-content p{
+    font-size: 14px;
+    font-family: 'Arial Rounded MT';
+    line-height: 23px;
+    margin-top:5%;
+}
+.abt-content h2 {
+font-family:'Abril Fatface, cursive';
+text-transform:none;
+
+}
+.abt-content span {
+font-size:1.8vw;
+}
+.abt-img{
+    width: 60%;
+    background: #F47425;
+    padding-bottom: 5%;
+    padding-right: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 13%;
+}
+.abt-img img{
+    width: 100%;
+    margin-top: -10%;
+    margin-left: -10%;
+}

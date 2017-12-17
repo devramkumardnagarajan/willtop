@@ -504,8 +504,8 @@ section.big-text {
 }
 /*form*/
 form {
-    width: 380px;
-    padding: 3em 2em 2em 2em;
+    width: 69.35%;
+    padding: 3em 2em 2em 2em !important;
     background: #fff;
     border: none;
     box-shadow: rgba(0,0,0,0.14902) 0px 20px 50px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px;
@@ -1238,7 +1238,7 @@ font-size: 14px;
 	
     list-style-type: none;
     padding: 8px 8px;
-    position: absolute;
+   /* position: absolute;*/
     width: 100%;
 	top: 36px;
 	background-color: #fff;box-shadow:rgba(0,0,0,0.14902) 0px 10px 20px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px;
