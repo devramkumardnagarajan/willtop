@@ -352,7 +352,7 @@
         <!--LMS ENDS-->
 
         <!--DEVELOPMENT PROCESS STARTS-->
-        <div data-target="dev_process" id="dev_process" class="section-container">
+        <div data-target="dev_process" id="dev_process" class="section-container dev_process">
             <!--<div class="grid_line">
 					<div class="gradient_circle sm_circle"></div>
 					<div class="gradient_circle xs_circle"></div>
@@ -363,11 +363,11 @@
                 <div class="content-resizer">
 
                     <div class="container">
-                        <section class="big-text slideInRight animated animated ">
+                        <section class="big-text">
                             Development<br>
                             Process
                         </section>
-                        <center class="slideInLeft animated animated"><img src="svg/development-process.svg"></center>
+                        <center class="process-image"><img src="svg/development-process.svg"></center>
                     </div>
 
                 </div>
@@ -1146,8 +1146,25 @@ $(".service_list li").click(function(){
 
     }
 		
+    ; (function ($, win) {
+        $.fn.inViewport = function (cb) {
+            return this.each(function (i, el) {
+                function visPx() {
+                    var H = $(this).height(),
+                        r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+                    return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+                } visPx();
+                $(win).on("resize scroll", visPx);
+            });
+        };
+    }(jQuery, window));
 
-										
+    $(".dev_process").inViewport(function (px) {
+        if (px) {
+            $('.big-text').addClass("slideInRight animated animated");
+            $('.process-image').addClass("slideInLeft animated animated");
+        }
+    });
 
 
 										
