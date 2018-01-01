@@ -26,6 +26,7 @@ function main() {
             }
         }), $(window).bind("scroll", function() {
             $(window).height();
+            console.log("hi");
             $(window).scrollTop() >= 100 ? $(".navbar-default").addClass("on") : $(".navbar-default").removeClass("on")
         }), /*$("body").scrollspy({
             target: ".navbar-default",
@@ -54,8 +55,10 @@ function main() {
                 }), $(document).keyup(function(a) {
                     27 == a.keyCode && b.hasClass("show-nav") && (Modernizr.csstransforms ? (b.removeClass("show-nav"), d.removeClass("show-nav"), g()) : (b.removeClass("show-nav"), d.removeClass("show-nav"), b.css("right", "-300px"), d.css("right", "30px"), g()))
                 })
-            }), $(window).load(function() {
+        }), $(window).load(function () {
+            if ($(".lp-our-numbers").length != undefined) {
                 $(".lp-our-numbers").addClass("active")
+            }
             }), $(window).scroll(function() {
                 h()
             }), $(function() {
@@ -247,8 +250,7 @@ function main() {
         }(), $(window).load(function() {
             window.matchMedia("(min-width: 992px)").matches && $(".lp-health-our_nmbers").addClass("active")
         }), $(window).scroll(function() {
-            var a = $(this).scrollTop();
-            console.log("scrolled");
+            var a = $(this).scrollTop();           
             var d, e, b = $(".lp-information_ih");
             void 0 !== b && void 0 !== b.offset() && (d = b.offset().top), (e = a - d + 400) >= 100 && $(".lp-inline_block-ih li").addClass("active")
         }), $(".screen-navigations a").click(function(a) {
