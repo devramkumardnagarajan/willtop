@@ -13,7 +13,7 @@ a:focus, a:hover {
   border: solid px #ccc;
   box-sizing: border-box;
 }
-div#home,div#dev_process,div#client,div#lms,div#contact_form{ background: #fff; }
+div#home,div#dev_process,div#lms,div#contact_form{ background: #fff; }
 /*div#lms,div#contact_form{ background: #f5f5f5; }*/
 header img{
 	width: 70% !important;
@@ -435,8 +435,15 @@ div[data-target] > div {
     transform: translate(-50%,0%);
 }
 */
-#lms p{ width:80%;}
-
+#lms p{ width:100%;line-height:25px;}
+#lms h2 {
+text-align: center;
+    text-transform: capitalize;
+    margin-bottom:5% !important;
+}
+#lms hr {
+border-top: 2px solid #E5E8EA;
+}
 #client .md_circle{
 	left: 55%;
     bottom: -30%;
@@ -457,18 +464,19 @@ section.icon-holder {
 section.big-text {
     text-align: center;
     font-size: 10vw;
-    top: 50%;
-    left: 50%;
+    top: 10%;
+    left: 20%;
     font-family: "Abril Fatface", cursive;
     line-height: 10vw;
     color: #f3f3f3;
     position: absolute;
     transform: translate(-50%, -95%);
-    z-index: 1;
+    z-index: 0;
 }
 
 /*map*/
 .map{
+    width:100%;
 	/*width: 55%;
     position: absolute;
     left: 50%;
@@ -504,8 +512,8 @@ section.big-text {
 }
 /*form*/
 form {
-    width: 69.35%;
-    padding: 3em 2em 2em 2em !important;
+    width: 100%;
+    padding: 3em 1em 1em 2em !important;
     background: #fff;
     border: none;
     box-shadow: rgba(0,0,0,0.14902) 0px 20px 50px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px;
@@ -547,7 +555,7 @@ form {
 /*  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   border: 0;
   background: none;
-  padding: 8px 0 8px 0;
+  padding: 4px 0 4px 0;
   font-size: 14px;
   outline: 0;
   width: 100%;
@@ -559,7 +567,7 @@ form {
 .ui-input input + label,.ui-input textarea + label {
   position: relative;
   display: block;
-  padding: 8px 0 8px 0;
+  padding: 4px 0 4px 0;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: .0875em;
@@ -964,8 +972,8 @@ section.controller {
 #technology .content-resizer .container {
     background: url(../img/technology.png) no-repeat;
     background-size: 84%;
-    background-position-x: 0%;
-    background-position-y: 86%;
+    background-position-x: 40%;
+    background-position-y: 55%;
     height:inherit;
     min-height:500px;
 }
@@ -1005,7 +1013,7 @@ figure.snip0015 figcaption {
   width: 100%;
   height: 100%;
 }
-#portfolio figure.snip0015 figcaption{ padding: 2em}
+#portfolio figure.snip0015 figcaption{ padding: 1.5em}
 figure.snip0015 figcaption::before {
   position: absolute;
   top: 50%;
@@ -1039,9 +1047,11 @@ figure.snip0015 p {
   font-weight: 200	;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-  color: #333;
+  color: #FFF;
   line-height: 23px;
   font-size: 14px;
+  font-size: 14px;
+  text-transform: none;
 }
 figure.snip0015 a {
   left: 0;
@@ -1396,16 +1406,21 @@ ol, ul {
     font-family: 'Abril Fatface', cursive;
     line-height: 1.5;
     font-size: 1.2vw;
+    font-weight:bold;
 }
 
 #accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
-    content:"\e113";
+   /* content:"\e113";*/
+    
+    content:"\2212";
     float: right;
     font-family: 'Glyphicons Halflings';
 	margin-right :1em;
 }
 #accordion .panel-title > a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before  {
-    content:"\e114";
+    /*content:"\e114";*/
+    content:"\002B";
+    
 }
 
 .panel-default>.panel-heading {
@@ -1442,10 +1457,27 @@ div#e_learning_popup {
         padding-bottom: 20px;
 }
 #portfolio .modal-body img {
-    height: 80px;
+    height: 40px;
+    float: left;
 }
-#portfolio .modal-body h3{ font-size: 1.7vw; font-weight: normal; line-height: 1.2vw;}
-#myCarousel_portfolio img{ height: 430px !important; max-height: 430px; overflow: hidden;}
+#portfolio .modal-body h3{ font-size: 1.7vw; font-weight: normal; line-height: 2.2vw;
+    margin-left: 25%;}
+#myCarousel_portfolio img{ 
+    height: 400px !important; 
+    max-height: 430px; 
+    overflow: hidden;
+    width: 100% !important;
+    margin-bottom: 10px;
+
+}
+.mycarousel img {
+height: 400px !important; 
+max-height: 430px; 
+overflow: hidden;
+width: 100% !important;
+margin-bottom: 10px;
+
+}
 .row.img_wrapper {
     padding-bottom: 45px;
 }
@@ -1459,7 +1491,7 @@ footer {
 }
 #e_learning .carousel-inner p{width: 85%;}
 .address {
-    margin-top: 50%;
+    margin-top: 45%;
     transform: translateY(-50%);
 }
 header.portfolio{ background-color: #fff}
@@ -1480,3 +1512,11 @@ header.portfolio{ background-color: #fff}
     width: 73%;
 }
 }
+
+.lms-img {
+text-align:center;
+}
+
+    .lms-img img {
+     width:100px;
+    }
