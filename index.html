@@ -384,7 +384,7 @@
         <!--DEVELOPMENT PROCESS ENDS-->
 
         <!--TECHNOLOGY PROCESS STARTS-->
-        <div data-target="technology" id="technology" class="section-container white-bg">
+        <div data-target="technology" id="technology" class="section-container white-bg ">
             <!--<div class="grid_line">
 					<div class="gradient_circle sm_circle"></div>
 					<div class="gradient_circle xs_circle"></div>
@@ -1185,7 +1185,12 @@ $(".service_list li").click(function(){
             $('.process-image').addClass("slideInLeft animated animated");
         }
     });
-
+    $("#technology").inViewport(function (px) {
+        if (px) {
+            $('#technology').addClass("zoomIn animated animated");
+        }
+    });
+    
     function sendMail() {
         var name = $("#name").val();
         var email = $("#email").val();
