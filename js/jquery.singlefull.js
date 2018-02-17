@@ -58,7 +58,8 @@ if (!Array.prototype.indexOf) {
                 console.log("code:"+code);
                 if (code == 38 || code == 40) {
                     var sectionListLength = sectionList.length;
-                    var nextIndex = (code == 38) ? ((sectionListLength + currentIndex - 1) % sectionListLength) : ((sectionListLength + currentIndex + 1) % sectionListLength);
+                    //var nextIndex = (code == 38) ? ((sectionListLength + currentIndex - 1) % sectionListLength) : ((sectionListLength + currentIndex + 1) % sectionListLength);
+                    var nextIndex = (code == 38) ? ( currentIndex - 1) : (currentIndex + 1);
                     goToSection(sectionList[nextIndex], opts);
                 }
 
@@ -284,9 +285,9 @@ if (!Array.prototype.indexOf) {
 
         // ************  Scrolling  **********//
         keyboard: true, // 是否接受键盘操作
-        loopScroll: true, // 是否允许循环轮播  优先级高于loopTop与loopBottom 
-        loopTop: true, // 是否允许从第一页滚屏至最后一页
-        loopBottom: true, // 是否允许从最后一页滚屏至第一页
+        loopScroll: false, // 是否允许循环轮播  优先级高于loopTop与loopBottom 
+        loopTop: false, // 是否允许从第一页滚屏至最后一页
+        loopBottom: false, // 是否允许从最后一页滚屏至第一页
 
         // ************  Navigation  **********//
         navigation: true, // 是否允许出现导航点
