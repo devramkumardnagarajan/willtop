@@ -46,20 +46,20 @@ p {
 }
 a{cursor: pointer}
 .section-container h2,.section-container h3{font-family: 'Abril Fatface', cursive;
-    line-height: 3vw;
-    font-size: 2.5vw;
+    line-height: calc(12px + 2vw);
+    font-size: calc(12px + 2.5vw);
     margin-bottom: 20px !important;
     margin-top: 20px !important;
 }
-.section-container h1{font-family: 'Abril Fatface', cursive;line-height: 4.5vw;
-    font-size: 4vw; margin-bottom: 50px!important;}
+.section-container h1{font-family: 'Abril Fatface', cursive;line-height: calc(12px + 3.5vw);
+    font-size: calc(12px + 3vw); margin-bottom: 50px!important;}
 h2,h3{font-family: 'Abril Fatface', cursive;
-    line-height: 3vw;
-    font-size: 2.5vw;
+    line-height: calc(12px + 2vw);
+    font-size: calc(12px + 1.7vw);
     margin-bottom: 20px !important;
 }
-h1{font-family: 'Abril Fatface', cursive;line-height: 4.5vw;
-    font-size: 4vw; margin-bottom: 50px!important;}
+h1{font-family: 'Abril Fatface', cursive;line-height: calc(12px + 3.5vw);
+    font-size: calc(12px + 3vw); margin-bottom: 50px!important;}
 body { background: #fff; font-family: 'Poppins', sans-serif !important;}
 #logo, .message { color: #333; }
 #logo {
@@ -542,7 +542,8 @@ form {
 
 /*form*/
 .form-footer {
-  margin-top: 2em;
+  margin-top: 1em;
+ 
 }
 
 .ui-input {
@@ -969,9 +970,11 @@ section.controller {
     width: 20px !important;
     height: 30px  !important;
 }
+
+
 #technology .content-resizer .container {
-    background: url(../img/technology.png) no-repeat;
-    background-size: 84%;
+	background: url(../img/technology.png) no-repeat;
+	    background-size: 84%;
     background-position-x: 40%;
     background-position-y: 55%;
     height:inherit;
@@ -1095,7 +1098,7 @@ figure.snip0015:hover figcaption p {
 #portfolio figure.snip0015:hover figcaption{ background-color: rgba(0,0,0,0.8); transition: 0.4s}
 #portfolio figure.snip0015 h2{color: #fff;
     line-height: 30px;
-    font-size: 1.2vw;
+    font-size: calc(12px + 0.5vw);
     font-family: 'Poppins', sans-serif;
 }
 .border_line{
@@ -1165,8 +1168,8 @@ div.circle_map {
     padding: 0;
     margin-bottom: 15px;
     margin-right: 30px;
-    font-size: 1.2vw;
-    line-height: 1.5vw;
+    font-size: calc(12px + 0.7vw);
+    line-height: calc(12px + 0.7vw);
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1186,7 +1189,7 @@ div.circle_map {
 .btn.active, .btn:active {
     box-shadow: none !important;
 }
-#portfolio img{ height: 260px}
+#portfolio img{ width: 285px; height: 260px}
 #portfolio .gallery_product{ padding: 0}
 .orange{ color:#ff5b22 !important}
 .filter_menu {
@@ -1222,7 +1225,7 @@ section.heading{
     background: #ccc;
     padding: 15px;
 }
-section h4{ font-size: 1.5vw}
+section h4{ font-size: calc(12px + 0.7vw)}
 h5{ font-size:20px !important;font-family: 'Abril Fatface', cursive;    margin: 25px 0 10px;}
 /*developement process*/
 #dev_process img{
@@ -1405,7 +1408,7 @@ ol, ul {
     text-decoration: none;
     font-family: 'Abril Fatface', cursive;
     line-height: 1.5;
-    font-size: 1.2vw;
+    font-size: calc(12px + 0.5vw);
     font-weight:bold;
 }
 
@@ -1460,19 +1463,19 @@ div#e_learning_popup {
     height: 40px;
     float: left;
 }
-#portfolio .modal-body h3{ font-size: 1.7vw; font-weight: normal; line-height: 2.2vw;
+#portfolio .modal-body h3{ font-size: calc(12px + 1vw); font-weight: normal; line-height: calc(12px + 1.2vw);
     margin-left: 25%;}
 #myCarousel_portfolio img{ 
-    height: 400px !important; 
-    max-height: 430px; 
+    height: 100%!important; 
+   /* max-height: 430px; */
     overflow: hidden;
     width: 100% !important;
     margin-bottom: 10px;
 
 }
 .mycarousel img {
-height: 400px !important; 
-max-height: 430px; 
+height: 100% !important; 
+/* max-height: 430px; */
 overflow: hidden;
 width: 100% !important;
 margin-bottom: 10px;
