@@ -1103,11 +1103,11 @@ AOS.init({
             //alignContent();
         });
 	
-	var $input = $('.form-fieldset > input');
+	/*var $input = $('.form-fieldset > input');
 
 $input.blur(function (e) {
   $(this).toggleClass('filled', !!$(this).val());
-});
+});*/
 		
 		/* When the user clicks on the button,
 		toggle between hiding and showing the dropdown content */
@@ -1222,9 +1222,10 @@ $(".service_list li").click(function(){
             }
         });
     }
+
     var url = window.location.href;
     console.log("url:" + url);
-    if (url.indexOf("#") > -1) {
+    if (window.innerWidth > 767 && url.indexOf("#") > -1) {
         var sectionList = []; 
         $("[data-target]").each(function (index, elem) {
             sectionList.push($(this).attr("data-target"));
@@ -1238,7 +1239,8 @@ $(".service_list li").click(function(){
         // get the position of the target
         console.log("secName:" + secName);
         var index = sectionList.indexOf(secName)
-        var targetPosition = index * window.innerHeight + ((index-1)*90);
+        var factor = (window.innerWidth > 767) ? (90) : (65);
+        var targetPosition = index * window.innerHeight + ((index-1)*factor);
         //var targetPosition = $('#'+secName).position().top+window.innerHeight;
         console.log("target:"+targetPosition);
         if (!isAnimating) {
