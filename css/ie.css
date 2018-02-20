@@ -1,0 +1,33 @@
+﻿.lp-footer .lp-right-wrapper, .lp-footer .lp-left-wrapper{
+    display: flexbox;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; 
+    
+}
+.lp-left-wrapper {
+    margin-top:-20px;
+    float: left;
+}
+.lp-footer {
+    margin-top:20px;
+}
+.lp-right-wrapper {
+    float: right;
+    margin-top:-20px;
+}
+.lp-footer-logo {
+width:100px;
+float:left;
+}
+.lp-footer .lp-right-wrapper ul li {
+    display: inline-block;
+}
+.al-footer-links {
+float:left;
+}
+.footer-wraper {
+    padding: 20px 25px 15px 25px;
+    margin-right: -11px;
+}
