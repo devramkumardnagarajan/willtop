@@ -21,7 +21,9 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/w_logo_xQt_icon.ico">
     <script src="js/modernizr.min.js" type="text/javascript"></script>
-	
+	<!--[if IE]>
+   <link rel="stylesheet" type="text/css" href="css/ie.css" />
+   <![endif]-->
 </head>
 
 <body>
@@ -733,6 +735,44 @@ expectations.</p>
                             <button type="button" onclick="sendMail()">
                                 <img src="svg/sent-mail.svg"></button>
                         </form>
+
+
+                         <!--<form class="form">
+
+                           
+                                <input type="text" id="name" tabindex="0" />
+                                
+
+                            
+                                <input type="email" id="email" tabindex="0" />
+                                
+
+                            
+                                <input type="number" id="mobile" />                                
+                           
+
+                                <select id="services" >
+                                    <option value="e-Learning Development">e-Learning Development</option>
+                                    <option value="LMS Implementation">LMS Implementation</option>
+                                    <option value="LMS Migration">LMS Migration</option>
+                                    <option value="LMS Support">LMS Support</option>
+                                    <option value="LMS Consultation">LMS Consultation</option>
+                                </select>
+                               
+                            
+
+                            
+                               <textarea id="your_queries" rows="2"></textarea>
+
+                               
+							
+
+
+                            <button type="button" onclick="sendMail()">
+                                <img src="svg/sent-mail.svg"></button>
+                        </form>-->
+
+
                     </div>
                     <div class="col-sm-8">
                         <div class="col-sm-12 aem-holder">
@@ -1265,7 +1305,11 @@ $(".service_list li").click(function(){
         $("#lp-main-wrapper").css({"height":height});
     }
     
-										
+    if (navigator.appName == 'Microsoft Internet Explorer' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {
+        var height = window.innerHeight;
+        console.log(height);
+        $(".lp-content-table").css({ "height": height });
+    }
     </script>
     
     
