@@ -25,10 +25,16 @@ gapi.analytics.ready(function() {
    * If no access has been created, render an authorize button inside the
    * element with the ID "embed-api-auth-container".
    */
-  gapi.analytics.auth.authorize({
+ /* gapi.analytics.auth.authorize({
     container: 'embed-api-auth-container',
     clientid: '801952864789-p9lfrn7nr2toc540a88200fj2fbak4rc.apps.googleusercontent.com'
-  });
+  });*/
+  
+  gapi.analytics.auth.authorize({
+                        'serverAuth': {
+                            'access_token': "ya29.Glv-BW1JtRQ5b9AvF0gu0PeDBUcJyBu9kiwFgkZx48TxpY__3QZgbt29zI3TZtbO0UdDGSpe-vrNdL02XoUVbrxGo8_2IhR3AEMobPHNFA8KsQxakOPoNWEVzNZI"
+                        }
+                    });
 
 
   /**
