@@ -62,7 +62,7 @@ gapi.analytics.ready(function() {
    * Create the first DataChart for top countries over the past 30 days.
    * It will be rendered inside an element with the id "chart-1-container".
    */
-  var dataChart1 = new gapi.analytics.googleCharts.DataChart({
+  /*var dataChart1 = new gapi.analytics.googleCharts.DataChart({
     query: {     
       'start-date': '30daysAgo',
       'end-date': 'today',
@@ -79,7 +79,24 @@ gapi.analytics.ready(function() {
       }
     }
   });
-
+*/
+  var dataChart1 = new gapi.analytics.googleCharts.DataChart({
+    query: {     
+      'start-date': '30daysAgo',
+      'end-date': 'today',
+      'metrics': 'ga:totalEvents',
+      'dimensions': 'ga:eventAction,ga:eventLabel',
+      'filters': 'ga:eventCategory==FeedBacks'
+    },
+    chart: {
+      container: 'chart-1-container',
+      type: 'PIE',
+      options: {
+        width: '100%',
+        pieHole: 4/9
+      }
+    }
+  });
 
   /**
    * Create the second DataChart for top countries over the past 30 days.
