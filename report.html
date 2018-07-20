@@ -63,13 +63,12 @@ gapi.analytics.ready(function() {
    * It will be rendered inside an element with the id "chart-1-container".
    */
   var dataChart1 = new gapi.analytics.googleCharts.DataChart({
-    query: {
-      metrics: 'ga:sessions',
-      dimensions: 'ga:country',
+    query: {     
       'start-date': '30daysAgo',
-      'end-date': 'yesterday',
-      'max-results': 6,
-      sort: '-ga:sessions'
+      'end-date': 'today',
+      'metrics': 'ga:totalEvents',
+      'dimensions': 'ga:eventLabel',
+      'filters': 'ga:eventCategory==FeedBack'
     },
     chart: {
       container: 'chart-1-container',
