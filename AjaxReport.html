@@ -41,7 +41,7 @@ function loadChart(){
               d[item[1]] = item[2];
               data[item[0]] = d;
            }
-           if(seriesArray[item[1]] != undefined)
+           if(seriesArray[item[1]] == undefined)
            {
               seriesArray[item[1]] = item[1]
            }
@@ -61,6 +61,7 @@ function loadChart(){
           sdata.push({ valueField: data[key], name: data[key] });
           })
           console.log(bata);
+          console.log(seriesArray);
           console.log(sdata);
           
           
