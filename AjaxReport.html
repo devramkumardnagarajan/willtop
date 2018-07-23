@@ -58,7 +58,7 @@ function loadChart(){
           bata.push(data[key]);
           })
           Object.keys(seriesArray).map((key)=>{
-          sdata.push({ valueField: data[key], name: data[key] });
+          sdata.push({ valueField: seriesArray[key], name: seriesArray[key] });
           })
           console.log(bata);
           console.log(seriesArray);
