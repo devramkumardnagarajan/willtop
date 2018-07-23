@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="feedback-chart-container"></div>
+</body>
+<script>
+var url = "https://www.googleapis.com/analytics/v3/data/ga";
+data = {
+'ids':'ga:141303550',
+'start-date':'30daysAgo',
+'end-date':'today',
+'metrics': 'ga:totalEvents',
+'dimensions': 'ga:eventAction,ga:eventLabel',
+'sort':'ga:eventLabel',
+'filters': 'ga:eventCategory==FeedBacks'
+'access_token'='ya29.GlwBBk5vgxQ-D-1ppRlLfcbTZAyU8b39tbxOSq0GWSaCxhSPgzSo4kSXzf0ntEmxPhF9F7Jgj0_zSiS-LKzOd6LokEYs_QxZbeKlLW2V_y9wLU7Owk_vQsthrb7h1w'
+}
+loadChart();
+function loadChart(){
+   $.ajax({url: url,
+        type:'GET',
+        data:data,
+       success: function(result){
+        console.log(JSON.stringify(result));
+    }});
+}
+</script>
+</html>
