@@ -30,19 +30,26 @@ function loadChart(){
        success: function(result){
         console.log(JSON.stringify(result));
         var data = [];
+          var seriesArray = [];
         result.rows.map((item,i)=>{
            if(data[item[0]] == undefined){
               
            data[item[0]] = {'action':item[0],[item[1]]:item[2]}
+               
            }else{
            var d = data[item[0]];
               d[item[1]] = item[2];
               data[item[0]] = d;
            }
+           if(seriesArray[item[1]] != undefined)
+           {
+              seriesArray[item[1]] = item[1]
+           }
         });
            
           console.log(data);
           var bata = [];
+          var sdata = [];
           /*data.map((d,i) => { 
              consoloe.log(d);
              bata[i]=d
@@ -50,7 +57,11 @@ function loadChart(){
           Object.keys(data).map((key)=>{
           bata.push(data[key]);
           })
+          Object.keys(seriesArray).map((key)=>{
+          sdata.push({ valueField: data[key], name: data[key] });
+          })
           console.log(bata);
+          console.log(sdata);
           
           
           $(function(){
@@ -60,13 +71,7 @@ function loadChart(){
             argumentField: "action",
             type: "stackedBar"
         },
-        series: [
-            { valueField: "1", name: "1" },
-            { valueField: "2", name: "2" },
-            { valueField: "3", name: "3" },
-            { valueField: "4", name: "4" },
-            { valueField: "5", name: "5" }
-        ],
+        series: sdata,
         legend: {
             verticalAlignment: "bottom",
             horizontalAlignment: "center",
