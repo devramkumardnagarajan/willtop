@@ -86,12 +86,13 @@ gapi.analytics.ready(function() {
       'end-date': 'today',
       'metrics': 'ga:totalEvents',
       'dimensions': 'ga:eventLabel',
+	  'pivotDimension':'ga:eventLabel',
       'filters': 'ga:eventCategory==FeedBacks'
     },
     chart: {
       container: 'chart-1-container',
+	  stacked:true,
       type: 'BAR'
-      
     }
   });
 
