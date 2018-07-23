@@ -102,7 +102,7 @@ gapi.analytics.ready(function() {
   }).on('success', function(response) {
   alert(JSON.stringify(response.data));
   }).on('error', function(error) {
-  alert(error);
+  alert(JSON.stringify(error));
   });
 
   /**
