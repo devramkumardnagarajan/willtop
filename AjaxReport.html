@@ -1,9 +1,14 @@
 <html>
 <head>
+   <link href="https://cdn3.devexpress.com/jslib/18.1.4/css/dx.light.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/18.1.4/js/dx.all.js"></script>
+   
 </head>
 <body>
-<div id="feedback-chart-container"></div>
+<div class="dx-viewport demo-container">
+        <div id="chart"></div>
+    </div>
 </body>
 <script>
 var url = "https://www.googleapis.com/analytics/v3/data/ga";
@@ -39,6 +44,49 @@ function loadChart(){
           console.log(data);
           var bata = data.map(d => d);
           console.log(bata);
+          
+          
+          $(function(){
+    $("#chart").dxChart({
+        dataSource: data,
+        commonSeriesSettings: {
+            argumentField: "action",
+            type: "stackedBar"
+        },
+        series: [
+            { valueField: "1", name: "1" },
+            { valueField: "2", name: "2" },
+            { valueField: "3", name: "3" },
+            { valueField: "4", name: "4" },
+            { valueField: "5", name: "5" }
+        ],
+        legend: {
+            verticalAlignment: "bottom",
+            horizontalAlignment: "center",
+            itemTextPosition: 'top'
+        },
+        valueAxis: {
+            title: {
+                text: "millions"
+            },
+            position: "right"
+        },
+        title: "Male Age Structure",
+        "export": {
+            enabled: true
+        },
+        tooltip: {
+            enabled: true,
+            location: "edge",
+            customizeTooltip: function (arg) {
+                return {
+                    text: arg.seriesName + " years: " + arg.valueText
+                };
+            }
+        }
+    });
+});
+
     }});
    
 }
