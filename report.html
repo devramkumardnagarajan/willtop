@@ -84,13 +84,14 @@ gapi.analytics.ready(function() {
     query: {     
       'start-date': '30daysAgo',
       'end-date': 'today',
-      'metrics': 'ga:eventLabel',
+      'metrics': 'ga:totalEvents',
       'dimensions': 'ga:eventAction',      
       'filters': 'ga:eventCategory==FeedBacks'
     },
     chart: {
       container: 'chart-1-container',	  
       type: 'COLUMN',
+      isStacked: true,
       options:{
       width: '100%',
       //stacked:true
