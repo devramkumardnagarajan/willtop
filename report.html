@@ -100,7 +100,9 @@ gapi.analytics.ready(function() {
     }
   }).on('success', function(response) {
   alert(JSON.stringify(response.data));
-  });;
+  }).on('error', function(error) {
+  alert(error);
+  });
 
   /**
    * Create the second DataChart for top countries over the past 30 days.
