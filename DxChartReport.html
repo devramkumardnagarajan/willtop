@@ -18,7 +18,7 @@
 
 <script>
   // Replace with your view ID.
-  var VIEW_ID = '141303550';
+  var VIEW_ID = 'ga:141303550';
 
   // Query the API and print the results to the page.
   function queryReports() {
@@ -36,11 +36,35 @@
                 endDate: 'today'
               }
             ],
-            metrics: [
+            "metrics":
+      [
+        {
+          "expression": "ga:totalEvents"
+        }
+      ],
+      "dimensions":
+      [
+        {
+          "name": "ga:eventAction"
+        }
+      ],
+            "filters":
+            [
               {
-                expression: 'ga:sessions'
+                "expression":"ga:eventCategory==FeedBacks"
               }
-            ]
+              ],
+      "pivots":
+      [
+        {
+          "dimensions":
+          [
+            {
+              "name": "ga:eventLabel"
+            }
+          ]
+        }
+      ]
           }
         ]
       }
