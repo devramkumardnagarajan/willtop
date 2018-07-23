@@ -26,7 +26,14 @@ function loadChart(){
         console.log(JSON.stringify(result));
         var data = [];
         result.rows.map((item,i)=>{
-           data[i] = {'action':item[0],[item[1]]:item[2]}
+           if(data[item[0]] == undefined){
+              
+           data[item[0]] = {'action':item[0],[item[1]]:item[2]}
+           }else{
+           var d = data[item[0]];
+              d[item[1]] = item[2];
+              data[item[0]] = d;
+           }
         });
           console.log(data);
     }});
