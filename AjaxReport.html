@@ -42,13 +42,14 @@ function loadChart(){
         });
            
           console.log(data);
-          var bata = data.map(d => d);
+          var bata = [];
+          data.map((d,i) => { bata[i]=d});
           console.log(bata);
           
           
           $(function(){
     $("#chart").dxChart({
-        dataSource: data,
+        dataSource: bata,
         commonSeriesSettings: {
             argumentField: "action",
             type: "stackedBar"
