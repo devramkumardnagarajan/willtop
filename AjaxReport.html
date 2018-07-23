@@ -43,10 +43,13 @@ function loadChart(){
            
           console.log(data);
           var bata = [];
-          data.map((d,i) => { 
+          /*data.map((d,i) => { 
              consoloe.log(d);
              bata[i]=d
-          });
+          });*/
+          Object.keys(data).map((key)=>{
+          bata.push(data[key]);
+          })
           console.log(bata);
           
           
