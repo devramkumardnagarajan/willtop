@@ -84,8 +84,9 @@ gapi.analytics.ready(function() {
     query: {     
       'start-date': '30daysAgo',
       'end-date': 'today',
-      'metrics': 'ga:totalEvents,ga:eventLabel',
-      'dimensions': 'ga:eventAction',      
+      'metrics': 'ga:totalEvents',
+      'dimensions': 'ga:eventAction',
+      'pivotdimensions':'ga:eventLabel',
       'filters': 'ga:eventCategory==FeedBacks'
     },
     chart: {
