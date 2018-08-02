@@ -8,7 +8,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
  
  function GetParameterValues(param) {  
+            console.log(window.location.href);
             var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+            console.log(url);
             for (var i = 0; i < url.length; i++) {  
                 var urlparam = url[i].split('=');  
                 if (urlparam[0] == param) {  
