@@ -1,19 +1,21 @@
 <html>
 <head>
-<!-- Google Analytics 
+<!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-92592558-1', 'auto');
+var userId = GetParameterValues('id');
+var tracker = 'User'+userId; 
+ga('create', 'UA-92592558-1', 'auto',tracker,{'userId':userId});
+//ga('set','userId',userId);
 ga('send', 'pageview');
 </script>
-End Google Analytics -->
+<!-- End Google Analytics -->
  
  
- <!-- Global site tag (gtag.js) - Google Analytics -->
+ <!-- Global site tag (gtag.js) - Google Analytics 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92592558-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,6 +23,7 @@ End Google Analytics -->
   gtag('js', new Date());
 
   gtag('config', 'UA-92592558-1');
+ -->
 </script>
 <!-- Google Tag Manager 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WJRQJJ7');</script>
 <!-- End Google Tag Manager -->
  
- <!-- Google Tag Manager -->
+ <!-- Google Tag Manager 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -55,6 +58,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div onClick="alert('hi');" id="report-div" class="report" >div report</div>
 </body>
 <script>
+ function GetParameterValues(param) {  
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+            for (var i = 0; i < url.length; i++) {  
+                var urlparam = url[i].split('=');  
+                if (urlparam[0] == param) {  
+                    return urlparam[1];  
+                }  
+            }  
+        }  
 var btn = document.getElementById("btn");
 btn.addEventListener('click',saveFeedBack);
  var search = document.getElementById("search").value;
