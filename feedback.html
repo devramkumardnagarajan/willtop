@@ -19,6 +19,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             }  
 }
 var userId = GetParameterValues('id');
+ console.log(userId);
 var tracker = 'User'+userId; 
 ga('create', 'UA-92592558-1', 'auto',tracker,{'userId':userId});
 //ga('set','userId',userId);
