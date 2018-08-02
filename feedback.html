@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    
 var btn = document.getElementById("btn");
 var userIdSpan = document.getElementById("userIdSpan");
- userIdSpan.value = userId;
+ userIdSpan.innerHTML = userId;
 btn.addEventListener('click',saveFeedBack);
  var search = document.getElementById("search").value;
  function saveFeedBack()
